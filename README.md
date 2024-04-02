@@ -1,4 +1,4 @@
-# Brightlayer UI themes for Angular applications
+# Test Brightlayer UI themes for Angular applications
 
 [![](https://img.shields.io/circleci/project/github/etn-ccis/blui-angular-themes/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-angular-themes/tree/master)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/angular-themes.svg?label=@brightlayer-ui/angular-themes&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/angular-themes)
