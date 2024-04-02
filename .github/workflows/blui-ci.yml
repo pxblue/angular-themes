@@ -1,0 +1,58 @@
+name: CI Run
+
+on:
+  push:
+    branches: [ "dev", "master" ]
+  pull_request:
+    branches: [ "dev", "master" ]
+  pull_request_target:
+    types:
+      - opened
+    branches:
+      - '*/*'
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  verify_artifacts:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'yarn'
+    - run: yarn --frozen-lockfile
+    - run: yarn test
+
+  publish_angular_theme:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev') }}
+    needs: verify_artifacts
+    strategy:
+      matrix:
+        node-version: [18.x]
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      BRANCH: ${{ github.ref == 'refs/heads/master' && 'master' || 'dev' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn --frozen-lockfile
+      - run: yarn publish:package -b ${{env.BRANCH}}
