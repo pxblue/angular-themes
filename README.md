@@ -1,6 +1,6 @@
 # Brightlayer UI themes for Angular applications
 
-[![](https://img.shields.io/circleci/project/github/etn-ccis/blui-angular-themes/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-angular-themes/tree/master)
+[![Build](https://github.com/etn-ccis/blui-angular-themes/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-angular-themes/actions/workflows/blui-ci.yml)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/angular-themes.svg?label=@brightlayer-ui/angular-themes&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/angular-themes)
 
 This package provides theming support for Eaton applications using the Brightlayer UI design system. It includes resources for developers using Angular w/ [Angular Material](https://www.npmjs.com/package/@angular/material). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
