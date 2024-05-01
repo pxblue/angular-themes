@@ -56,22 +56,15 @@
     "@material/typography" "15.0.0-canary.684e33d25.0"
     tslib "^2.3.0"
 
-"@brightlayer-ui/colors@^3.0.0":
-  version "3.1.1"
-  resolved "https://registry.npmjs.org/@brightlayer-ui/colors/-/colors-3.1.1.tgz"
-  integrity sha512-fV10E5JDuVGDQ0gCY3pEfDwUo1+lvDFC5pmOAAGpN7YDramS6ggUpJ/LmYavKAudw7FNcaJnPi7tsQWJjvv/7w==
-  dependencies:
-    "@brightlayer-ui/types" "^2.0.0"
+"@brightlayer-ui/colors@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@brightlayer-ui/colors/-/colors-4.0.0.tgz#5bb3706eca98e849d1e80ca4c9f9ca731380d227"
+  integrity sha512-fF7Ne7cz4yFCzR96HrP1RVBw55s+cWbqYkPallnpmmtYnPwNS/DyAbbHFEnl2bxziq3CvAR2S+D6AnjIeluOZA==
 
 "@brightlayer-ui/prettier-config@^1.0.3":
   version "1.0.3"
   resolved "https://registry.npmjs.org/@brightlayer-ui/prettier-config/-/prettier-config-1.0.3.tgz"
   integrity sha512-EYm3+V7Qd+oYEF+8FadsXAZqXryEHHbGnrV1BMp9selhABjceqUqXPVE4Sn3SKWQdBNJ3En2A3EzgrzRbvRTaw==
-
-"@brightlayer-ui/types@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/@brightlayer-ui/types/-/types-2.0.0.tgz"
-  integrity sha512-DTCVwND6YC9qrkQl7pkFlN6QxDReJHtjuAiFU9HkXJN368vlw+fzHQ5/j4sB1sZl2eNwOgccv5ecl2XrlolOCw==
 
 "@fontsource/open-sans@^5.0.5":
   version "5.0.24"
